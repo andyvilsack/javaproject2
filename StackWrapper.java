@@ -2,9 +2,9 @@ import java.util.LinkedList;
 
 public class StackWrapper<DT> { 
 	
-	LinkedList<DT> L = new LinkedList(); 
+	LinkedList<DT> L;
 	StackWrapper() {
-		
+		L = new LinkedList();
 	}
 	
 	public void push(DT elem) {

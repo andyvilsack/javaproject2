@@ -1,10 +1,11 @@
 import java.util.LinkedList;
 
-public class QueueWrapper <DT>{
-LinkedList<DT> L = new LinkedList();
+public class QueueWrapper<DT>{
+
+	LinkedList<DT> L;
 	QueueWrapper()
 	 {
-	 	
+	 	L = new LinkedList();
 	 }
 
 	public void insert(DT elem)
