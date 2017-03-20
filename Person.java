@@ -22,7 +22,7 @@ public class Person {
 	}
 	public String toString()
 	{
-		String print = firstName + " " + lastName + " " + age + " " + gpa;
+		String print = "[" + age + "," + gpa + "," + lastName + "," + firstName + "]";
 		return print; 
 	}
 	String getlastName() 

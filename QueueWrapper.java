@@ -7,22 +7,22 @@ LinkedList<DT> L = new LinkedList();
 	 	
 	 }
 
-	void insert(DT elem)
+	public void insert(DT elem)
 	{
 		//try{
-		L.addFirst(elem);
+		L.addLast(elem);
 		//}
 		//throw(No)
 	}
-	DT remove()
+	public DT remove()
 	{
-		return L.getFirst();
+		return L.removeFirst();
 	}
-	DT peek()
+	public DT peek()
 	{
 		return L.peekFirst();
 	}
-	boolean isEmpty()
+	public boolean isEmpty()
 	{
 		if(L.peekFirst() == null)
 		{
@@ -36,11 +36,12 @@ LinkedList<DT> L = new LinkedList();
 	public String toString()
 	{
 		int i=0;
-		String aString = "";
+		String aString = "[";
 		for(i=0;i<L.size();i++)
 		{
 			aString +=L.get(i);
 		}
+		aString += " ]";
 		return aString;
 	}
 }

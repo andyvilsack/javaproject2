@@ -29,10 +29,11 @@ public class StackWrapper<DT> {
 	}
 	
 	public String toString() {
-		String bString = "";
+		String bString = "[";
 		for(int i = 0; i < L.size(); i++) {
 			bString += L.get(i);
 		}
+		bString += " ]";
 		return bString;
 	}
   
