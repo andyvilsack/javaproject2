@@ -1,3 +1,10 @@
+/*
+John-George Sample
+Andrew Vilsack
+CPSC 374
+Project 2
+*/
+
 class DriverApp {
 	public static void main(String[] args) {
 		
