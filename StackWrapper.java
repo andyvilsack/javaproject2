@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 
 public class StackWrapper<DT> { 
+	
 	LinkedList<DT> L = new LinkedList(); 
 	StackWrapper() {
 		

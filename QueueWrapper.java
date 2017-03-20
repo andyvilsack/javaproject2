@@ -1,10 +1,10 @@
 import java.util.LinkedList;
 
 public class QueueWrapper <DT>{
-
+LinkedList<DT> L = new LinkedList();
 	QueueWrapper()
 	 {
-	 	LinkedList<DT> L = new LinkedList();
+	 	
 	 }
 
 	void insert(DT elem)
@@ -24,7 +24,7 @@ public class QueueWrapper <DT>{
 	}
 	boolean isEmpty()
 	{
-		if(L.peekFirst == null)
+		if(L.peekFirst() == null)
 		{
 			return true;
 		}
@@ -33,13 +33,13 @@ public class QueueWrapper <DT>{
 			return false;
 		}
 	}
-	String toString()
+	public String toString()
 	{
 		int i=0;
 		String aString = "";
 		for(i=0;i<L.size();i++)
 		{
-			aString =+L.get(i);
+			aString +=L.get(i);
 		}
 		return aString;
 	}

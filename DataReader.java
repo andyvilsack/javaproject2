@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.NoSuchElementException;
 public class DataReader {
 		/* no data needed - this "object" is a procedure */
-		public DataReader(String fileName, StackArray aList)
+		public DataReader(String fileName, StackWrapper sList, QueueWrapper qList)
 		{
 			try
 			{
@@ -26,7 +26,8 @@ public class DataReader {
 					age = src.nextInt();
 					gpa = src.nextDouble();
 					/* save the values in the array as an object */
-					aList.push(new Person(firstName, lastName, age, gpa));
+					sList.push(new Person(firstName, lastName, age, gpa));
+					qList.insert(new Person(firstName, lastName, age, gpa));
 				}
 			}
 			catch(FileNotFoundException ex)
