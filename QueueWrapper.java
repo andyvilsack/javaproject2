@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.*;
 
 public class QueueWrapper<DT>{
 
@@ -10,14 +11,26 @@ public class QueueWrapper<DT>{
 
 	public void insert(DT elem)
 	{
-		//try{
+		try
+		{
 		L.addLast(elem);
-		//}
-		//throw(No)
+		}
+		catch(NoSuchElementException e)
+		{
+			System.err.println("Error: Cannot add null to Queue");
+		}
 	}
 	public DT remove()
 	{
+		try
+		{
 		return L.removeFirst();
+		}
+		catch(NoSuchElementException e)
+		{
+			System.err.println("Error: Cannot remove null from Queue");
+			return null;
+		}
 	}
 	public DT peek()
 	{

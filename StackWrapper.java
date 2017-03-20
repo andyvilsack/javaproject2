@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.*;
 
 public class StackWrapper<DT> { 
 	
@@ -8,11 +9,22 @@ public class StackWrapper<DT> {
 	}
 	
 	public void push(DT elem) {
-		L.addLast(elem);
+		try {
+			L.addLast(elem);
+		}
+		catch(NoSuchElementException e) {
+			System.err.println("Error: Cannot add null to Stack");
+		}
 	}
 	
 	public DT pop() {
-		return L.removeLast();
+		try{ 
+			return L.removeLast();
+		}
+		catch(NoSuchElementException e) {
+			System.err.println("Error: Cannot remove null from Stack");
+			return null;
+		}
 	}
 	
 	public DT peek() {
